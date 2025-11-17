@@ -1,0 +1,35 @@
+[CmdletBinding()] param(
+  [Parameter(Mandatory)][string]$Input,
+  [string]$Client = "default",
+  [switch]$DryRun
+)
+Set-StrictMode -Version Latest
+$VerboseOn = $PSBoundParameters.ContainsKey('Verbose')
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
+. "$PSScriptRoot\..\utils\config.ps1"
+. "$PSScriptRoot\..\utils\utils.ps1"
+
+Log "[ADVISOR] Starting with input '$Input' (client=$Client)" -Level "Info" -Verbose:$VerboseOn
+Ensure-Directory -Path $TriggerLogsRoot -Verbose:$VerboseOn
+
+$slug      = Slugify $Input
+$timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
+$trigger   = [ordered]@{
+  type="Build"; goal=$Input; client=$Client; style="default";
+  pages=@("Home","About","Contact");
+  meta=@{ created=(Get-Date).ToString("o"); source="advisor.ps1"; version="1.0.1" }
+}
+$path = Join-Path $TriggerLogsRoot ("trigger_{0}_{1}.json" -f $slug,$timestamp)
+
+if ($DryRun) {
+  Log "[ADVISOR] (DryRun) Would write trigger → $path" -Level "Info" -Verbose:$VerboseOn
+} else {
+  $trigger | ConvertTo-Json -Depth 6 | Out-File -FilePath $path
+  Log "[ADVISOR] Trigger saved → $path" -Level "Success" -Verbose:$VerboseOn
+}
+
+[pscustomobject]@{ Path=$path; Name=(Split-Path $path -Leaf); Data=$trigger }
+
+
+
+

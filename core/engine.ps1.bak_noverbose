@@ -1,0 +1,40 @@
+﻿param(
+  [Parameter(Mandatory)][Alias('Input')][string]$UserInput,
+  [string]$Client = "default",
+  [ValidateSet("Folder","Vercel","GitHub")] [string]$Provider = "Folder",
+  [switch]$DryRun
+)
+Set-StrictMode -Version Latest
+$VerboseOn = $PSBoundParameters.ContainsKey('Verbose')
+. "$PSScriptRoot\..\utils\config.ps1"
+. "$PSScriptRoot\..\utils\utils.ps1"
+
+$dirs = @($TemplatesRoot,$MemoryRoot,$SystemLogsRoot,$TriggerLogsRoot,$SiteOutputRoot,$DeploymentsPath)
+foreach ($d in $dirs) { Ensure-Directory -Path $d }
+
+try {
+  $adv    = & "$PSScriptRoot\advisor.ps1" -Input $UserInput -Client $Client -DryRun:$DryRun
+  if (-not $adv -or -not $adv.Path) { throw "advisor failed" }
+
+  $plan   = & "$PSScriptRoot\plan.ps1" -TriggerFile $adv.Path -DryRun:$DryRun
+  if (-not $plan) { throw "plan failed" }
+
+  $build  = & "$PSScriptRoot\build.ps1" -PlanFile (Join-Path $MemoryRoot "latest_plan.json") -DryRun:$DryRun
+  if (-not $build -or -not $build.Output) { throw "build failed" }
+
+  $deploy = & "$PSScriptRoot\deploy.ps1" -BuildPath $build.Output -Provider $Provider -Client $Client -DryRun:$DryRun
+  $final  = if ($DryRun) { "DryRun" } elseif ($deploy.status -eq "Deployed") { "Success" } else { "Partial" }
+
+  [pscustomobject]@{ status=$final; url=$deploy.url }
+}
+catch {
+  Log "[ENGINE] Error â†’ $($_.Exception.Message)" -Level "Error"
+  [pscustomobject]@{ status="Failed"; url="" }
+}
+
+
+
+
+
+
+

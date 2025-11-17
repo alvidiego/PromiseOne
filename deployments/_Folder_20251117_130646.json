@@ -1,0 +1,10 @@
+{
+  "client": "smoke",
+  "provider": "Folder",
+  "buildPath": "C:\\PromiseOne\\site_output\\_20251117_130646",
+  "project": "",
+  "timestamp": "2025-11-17T13:06:46.7746636-08:00",
+  "status": "Deployed",
+  "url": "C:\\PromiseOne\\deployments\\_Folder_20251117_130646",
+  "notes": []
+}

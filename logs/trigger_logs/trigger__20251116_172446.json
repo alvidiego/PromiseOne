@@ -1,0 +1,16 @@
+{
+  "type": "Build",
+  "goal": "Build a simple portfolio for Luna",
+  "client": "luna",
+  "style": "default",
+  "pages": [
+    "Home",
+    "About",
+    "Contact"
+  ],
+  "meta": {
+    "source": "advisor.ps1",
+    "created": "2025-11-16T17:24:46.4517733-08:00",
+    "version": "1.0.1"
+  }
+}

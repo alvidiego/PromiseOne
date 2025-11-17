@@ -1,0 +1,27 @@
+Set-StrictMode -Version Latest
+$PSDefaultParameterValues["Out-File:Encoding"] = "utf8"
+. "$PSScriptRoot\..\utils\config.ps1"
+. "$PSScriptRoot\..\utils\utils.ps1"
+
+function Write-MemorySnapshot {
+  [CmdletBinding()]
+  param(
+    [Parameter(Mandatory)][object]$Data,
+    [string]$Source = "",
+    [hashtable]$Meta = @{}
+  )
+  $VerboseOn = $PSBoundParameters.ContainsKey("Verbose")
+
+  Ensure-Directory -Path $MemoryRoot -Verbose:$VerboseOn
+  $stamp = Get-Date -Format "yyyyMMdd_HHmmss"
+  $obj = [ordered]@{
+    source = $Source
+    meta   = $Meta
+    data   = $Data
+    ts     = (Get-Date).ToString("o")
+  }
+  $file = Join-Path $MemoryRoot ("snapshot_{0}.json" -f $stamp)
+  $obj | ConvertTo-Json -Depth 10 | Out-File -FilePath $file
+  Log "[MEMORY] Snapshot → $file" -Level "Info" -Verbose:$VerboseOn
+  return $file
+}

@@ -1,0 +1,16 @@
+{
+  "type": "Build",
+  "goal": "Jarvis Smoke Test Site",
+  "client": "smoke",
+  "style": "default",
+  "pages": [
+    "Home",
+    "About",
+    "Contact"
+  ],
+  "meta": {
+    "source": "advisor.ps1",
+    "version": "1.0.1",
+    "created": "2025-11-17T13:06:46.5164406-08:00"
+  }
+}

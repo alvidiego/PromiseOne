@@ -1,0 +1,41 @@
+{
+  "source": "plan.ps1",
+  "meta": {
+    "path": "C:\\PromiseOne\\memory\\latest_plan.json"
+  },
+  "data": {
+    "goal": "Build a simple portfolio for Luna",
+    "client": "luna",
+    "style": "default",
+    "pages": [
+      {
+        "name": "Home",
+        "content": "",
+        "layout": "default",
+        "head_extras": "",
+        "lang": "en"
+      },
+      {
+        "name": "About",
+        "content": "",
+        "layout": "default",
+        "head_extras": "",
+        "lang": "en"
+      },
+      {
+        "name": "Contact",
+        "content": "",
+        "layout": "default",
+        "head_extras": "",
+        "lang": "en"
+      }
+    ],
+    "meta": {
+      "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251113_160757.json",
+      "created": "2025-11-13T16:07:57.8401357-08:00",
+      "source": "plan.ps1",
+      "version": "1.0.1"
+    }
+  },
+  "ts": "2025-11-13T16:07:57.8461444-08:00"
+}
