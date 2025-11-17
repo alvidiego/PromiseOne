@@ -157,6 +157,12 @@ if (-not $DryRun) {
         Out-File -FilePath (Join-Path $output "build_summary.json")
 
     Write-MemorySnapshot -Data $plan -Source "build.ps1" -Meta @{ output = $output } -Verbose:$Chatty
+    # keep a stable "latest" folder for Netlify
+    $latest = Join-Path $SiteOutputRoot "latest"
+    if (Test-Path -LiteralPath $latest) {
+        Remove-Item -LiteralPath $latest -Recurse -Force
+    }
+    Copy-Item -Path $output -Destination $latest -Recurse
 }
 
 [pscustomobject]@{
