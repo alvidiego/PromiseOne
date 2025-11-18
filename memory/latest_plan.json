@@ -1,5 +1,5 @@
 {
-  "goal": "haha",
+  "goal": "build",
   "client": "luna",
   "style": "default",
   "pages": [
@@ -26,9 +26,9 @@
     }
   ],
   "meta": {
+    "created": "2025-11-17T17:33:34.1337554-08:00",
     "source": "plan.ps1",
     "version": "1.0.1",
-    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_173239.json",
-    "created": "2025-11-17T17:32:39.8262069-08:00"
+    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_173334.json"
   }
 }

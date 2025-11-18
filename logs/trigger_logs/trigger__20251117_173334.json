@@ -1,0 +1,16 @@
+{
+  "type": "Build",
+  "goal": "build",
+  "client": "luna",
+  "style": "default",
+  "pages": [
+    "Home",
+    "About",
+    "Contact"
+  ],
+  "meta": {
+    "created": "2025-11-17T17:33:34.0687315-08:00",
+    "source": "advisor.ps1",
+    "version": "1.0.1"
+  }
+}
