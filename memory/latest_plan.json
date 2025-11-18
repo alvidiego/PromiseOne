@@ -27,8 +27,8 @@
   ],
   "meta": {
     "version": "1.0.1",
-    "source": "plan.ps1",
-    "created": "2025-11-17T13:45:08.1306023-08:00",
-    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_134508.json"
+    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_160858.json",
+    "created": "2025-11-17T16:08:58.6691573-08:00",
+    "source": "plan.ps1"
   }
 }
