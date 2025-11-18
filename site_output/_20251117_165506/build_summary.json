@@ -1,5 +1,5 @@
 {
-  "goal": "create a portfollio for luna",
+  "goal": "Build a simple portfolio for Luna",
   "client": "luna",
   "style": "default",
   "pages": [
@@ -26,9 +26,11 @@
     }
   ],
   "meta": {
-    "version": "1.0.1",
+    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_165506.json",
     "source": "plan.ps1",
-    "trigger": "C:\\PromiseOne\\logs\\trigger_logs\\trigger__20251117_170711.json",
-    "created": "2025-11-17T17:07:11.9563069-08:00"
+    "version": "1.0.1",
+    "created": "2025-11-17T16:55:06.7463501-08:00",
+    "build_version": "1.0.2",
+    "output": "C:\\PromiseOne\\site_output\\_20251117_165506"
   }
 }

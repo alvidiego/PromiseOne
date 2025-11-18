@@ -1,0 +1,16 @@
+{
+  "type": "Build",
+  "goal": "create a portfollio for luna",
+  "client": "luna",
+  "style": "default",
+  "pages": [
+    "Home",
+    "About",
+    "Contact"
+  ],
+  "meta": {
+    "version": "1.0.1",
+    "source": "advisor.ps1",
+    "created": "2025-11-17T17:07:11.8901113-08:00"
+  }
+}
