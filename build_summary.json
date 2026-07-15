@@ -1,0 +1,25 @@
+{
+  "goal": "GXE natural video stop",
+  "client": "GXE",
+  "style": "gxe",
+  "profile": "gxe",
+  "modules": {},
+  "pages": [
+    {
+      "name": "Home",
+      "content": "<section class=\"gxe-experience\" data-stage=\"arrival\" aria-label=\"GXE featured piece experience\">\n    <section class=\"gxe-scene gxe-arrival-scene\" aria-label=\"GXE arrival\">\n    <div class=\"gxe-emblem\" role=\"img\" aria-label=\"GXE chrome emblem\">\n        <span class=\"gxe-word\">\n            <img class=\"gxe-reference gxe-reference-chrome\" src=\"assets/gxe-reference.jpg\" alt=\"\" />\n            <img class=\"gxe-reference gxe-reference-full\" src=\"assets/gxe-reference.jpg\" alt=\"\" />\n        </span>\n        <span class=\"gxe-stones\" aria-hidden=\"true\">\n            <span class=\"gxe-stone gxe-stone-01\"></span>\n            <span class=\"gxe-stone gxe-stone-02\"></span>\n            <span class=\"gxe-stone gxe-stone-03\"></span>\n            <span class=\"gxe-stone gxe-stone-04\"></span>\n            <span class=\"gxe-stone gxe-stone-05\"></span>\n            <span class=\"gxe-stone gxe-stone-06\"></span>\n            <span class=\"gxe-stone gxe-stone-07\"></span>\n            <span class=\"gxe-stone gxe-stone-08\"></span>\n            <span class=\"gxe-stone gxe-stone-09\"></span>\n            <span class=\"gxe-stone gxe-stone-10\"></span>\n            <span class=\"gxe-stone gxe-stone-11\"></span>\n            <span class=\"gxe-stone gxe-stone-12\"></span>\n        </span>\n    </div>\n\n    <button class=\"gxe-hold\" type=\"button\" aria-label=\"Press and hold to reveal GXE\">\n        <span class=\"gxe-hold-instruction\">Press and hold</span>\n    </button>\n    </section>\n\n    <div class=\"gxe-bloom\" aria-hidden=\"true\"></div>\n\n    <section class=\"gxe-scene gxe-product-scene\" aria-label=\"Featured product reveal\" aria-hidden=\"true\">\n    <article class=\"piece-stage\" aria-label=\"Product Name\">\n        <div class=\"piece-light\" aria-hidden=\"true\"></div>\n        <div class=\"piece-media\" data-product-media data-video-start=\"8.6\" data-video-duration=\"6\">\n            <div class=\"piece-video-frame\">\n                <div class=\"piece-media-fallback\" role=\"img\" aria-label=\"Product Name\"></div>\n                <video class=\"piece-video\" muted playsinline preload=\"auto\" aria-hidden=\"true\">\n                    <source src=\"assets/gxe-product.mp4\" type=\"video/mp4\" />\n                </video>\n            </div>\n        </div>\n    </article>\n    <nav class=\"gxe-main-menu\" aria-label=\"GXE main menu\">\n        <div class=\"gxe-menu-brand\" aria-label=\"GXE\">GXE</div>\n        <div class=\"gxe-menu-current\">\n            <span class=\"gxe-menu-product\">Product Name</span>\n            <span class=\"gxe-menu-line\">The center of the GXE world.</span>\n        </div>\n        <button class=\"gxe-menu-action\" type=\"button\">Reserve Piece</button>\n    </nav>\n    </section>\n</section>",
+      "layout": "default",
+      "head_extras": "",
+      "theme_css": "",
+      "lang": "en"
+    }
+  ],
+  "meta": {
+    "version": "1.1.0",
+    "source": "plan.ps1",
+    "created": "2026-07-14T22:15:16.5845784-07:00",
+    "trigger": "C:\\PromiseOne\\runs\\logs\\trigger_logs\\trigger_gxe_natural_video_stop_20260714_221516.json",
+    "build_version": "1.1.1",
+    "output": "C:\\PromiseOne\\site_output\\gxe_20260714_221516"
+  }
+}
