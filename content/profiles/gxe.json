@@ -1,0 +1,19 @@
+{
+  "profile": "gxe",
+  "brand_name": "GXE",
+  "style": "gxe",
+  "pages": ["Home"],
+  "product_name": "Product Name",
+  "product_line": "The center of the GXE world.",
+  "product_video": "assets/gxe-product.mp4",
+  "product_video_start": 8.6,
+  "product_video_duration": 6,
+  "hold_instruction": "Press and hold",
+  "experience": {
+    "principle": "GXE illuminates the world. The world exists to showcase the piece.",
+    "transition": "Press-And-Hold Ice-Out Transition",
+    "stage_1": "A black void presents a single press-and-hold invitation.",
+    "stage_2": "Individual stones reveal chrome GXE first, then the purple structural star completes the ice-out.",
+    "stage_3": "Accumulated jewelry light blooms into the featured product scene."
+  }
+}

@@ -1,1 +1,16 @@
-deployments/
+# Generated builds and runtime history
+/site_output/
+/runs/
+
+# Local deployment copies stay untracked. Compact records are source history.
+/deployments/*
+!/deployments/records/
+!/deployments/records/**
+
+# Local inboxes, conversation attachments, and temporary publishing folders
+/notes/
+/.codex-remote-attachments/
+/publish_gxe_client_preview_*/
+
+# Retired local script backups
+*.bak*

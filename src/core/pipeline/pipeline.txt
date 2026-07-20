@@ -1,0 +1,24 @@
+{
+  "name": "promiseone-site",
+  "version": "1.0",
+
+  "context": {
+    "goal": "Engine Dynamic Pipeline Test",
+    "client": "Luna",
+    "provider": "Folder",
+    "paths": {
+      "content": "content/library",
+      "output": "site_output/latest"
+    }
+  },
+
+  "steps": [
+    {
+      "id": "load-content",
+      "script": "steps/load-content.ps1",
+      "with": {
+        "contentPath": "$ctx.paths.content"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "profile": "drywall",
+  "pages": ["Home", "Services", "Gallery", "About", "Contact"],
+  "services": [
+    "Drywall installation",
+    "Drywall repair and patching",
+    "Finishing and texture matching",
+    "Interior wall restoration"
+  ],
+  "trust_points": [
+    "Family owned and operated",
+    "30+ years experience",
+    "Clean work",
+    "Clear communication",
+    "Free estimates"
+  ],
+  "cta": "Request a Free Estimate",
+  "tone": "bold_trustworthy"
+}
