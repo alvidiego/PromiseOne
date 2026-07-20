@@ -1,0 +1,23 @@
+{
+  "record_version": 1,
+  "client_id": "gxe",
+  "display_name": "GXE",
+  "profile": "gxe",
+  "environment": "client-preview",
+  "source_build": "gxe_20260714_221516",
+  "source_build_created": "2026-07-14T22:15:16-07:00",
+  "published": "2026-07-14",
+  "provider": "github-branch-htmlpreview",
+  "repository": "alvidiego/PromiseOne",
+  "branch": "gxe-client-preview",
+  "revision": "3011580",
+  "url": "https://htmlpreview.github.io/?https://github.com/alvidiego/PromiseOne/blob/gxe-client-preview/index.html",
+  "status": "active-review",
+  "production": false,
+  "verified": "Opened successfully for mobile client-style review",
+  "notes": [
+    "Temporary client preview; not a production deployment.",
+    "The preview branch may move when a newer candidate replaces this build.",
+    "Use source_build as the authoritative local artifact reference."
+  ]
+}
