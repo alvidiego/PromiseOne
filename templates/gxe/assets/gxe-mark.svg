@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
+  <defs>
+    <linearGradient id="gxe-chrome" x1="0" y1="45" x2="0" y2="255" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="0.12" stop-color="#aeb8c8" />
+      <stop offset="0.24" stop-color="#f9fbff" />
+      <stop offset="0.42" stop-color="#414956" />
+      <stop offset="0.58" stop-color="#eef3ff" />
+      <stop offset="0.72" stop-color="#7b8594" />
+      <stop offset="0.88" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#58616e" />
+    </linearGradient>
+    <linearGradient id="gxe-highlight" x1="0" y1="50" x2="0" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96" />
+      <stop offset="0.38" stop-color="#dce7ff" stop-opacity="0.28" />
+      <stop offset="0.7" stop-color="#ffffff" stop-opacity="0.76" />
+      <stop offset="1" stop-color="#b8c7e2" stop-opacity="0.18" />
+    </linearGradient>
+    <g id="gxe-geometry" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M380 72H165C82 72 48 106 48 150s34 78 117 78h140" />
+      <path d="M226 150h104v105" />
+      <path d="M410 72l150 156" />
+      <path d="M560 72L410 228" />
+      <path d="M945 72H690c-78 0-105 34-105 78s27 78 105 78h255" />
+      <path d="M620 150h240" />
+    </g>
+  </defs>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#gxe-geometry" stroke="#030407" stroke-width="66" opacity="0.94" />
+    <use href="#gxe-geometry" stroke="#1d222b" stroke-width="58" />
+    <use href="#gxe-geometry" stroke="url(#gxe-chrome)" stroke-width="48" />
+    <use href="#gxe-geometry" stroke="#ffffff" stroke-width="3" opacity="0.7" transform="translate(0 -7)" />
+    <use href="#gxe-geometry" stroke="url(#gxe-highlight)" stroke-width="2" opacity="0.8" transform="translate(0 6)" />
+  </g>
+</svg>

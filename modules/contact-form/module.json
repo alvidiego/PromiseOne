@@ -1,0 +1,7 @@
+{
+  "name": "contact-form",
+  "version": 1,
+  "allowed_providers": ["formspree"],
+  "required_settings": ["provider", "endpoint"],
+  "endpoint_prefix": "https://formspree.io/f/"
+}

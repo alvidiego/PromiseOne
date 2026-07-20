@@ -1,0 +1,33 @@
+<section class="contact-form-module" aria-labelledby="contact-form-title-en">
+    <div class="contact-form-heading">
+        <p class="eyebrow">Project inquiry</p>
+        <h2 id="contact-form-title-en">Request a Free Estimate</h2>
+        <p>Tell us about your project and the best way to reach you.</p>
+    </div>
+
+    <form class="contact-form" action="[[MODULE_SETTING_ENDPOINT]]" method="post" accept-charset="UTF-8">
+        <div class="contact-form-fields">
+            <div class="contact-form-field">
+                <label for="contact-name-en">Name</label>
+                <input id="contact-name-en" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="contact-form-field">
+                <label for="contact-email-en">Email</label>
+                <input id="contact-email-en" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="contact-form-field contact-form-field-wide">
+                <label for="contact-phone-en">Phone</label>
+                <input id="contact-phone-en" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="contact-form-field contact-form-field-wide">
+                <label for="contact-message-en">Project details</label>
+                <textarea id="contact-message-en" name="message" rows="6" required></textarea>
+            </div>
+        </div>
+
+        <button class="contact-form-submit" type="submit">Send Request</button>
+    </form>
+</section>

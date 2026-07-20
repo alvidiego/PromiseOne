@@ -1,0 +1,77 @@
+# PromiseOne – System Rules (not in use currently)
+
+This file defines non-negotiable rules for working on PromiseOne.
+Any human or AI helper must read this before making changes.
+
+---
+
+## 1. Execution Context
+
+- All PowerShell commands assume execution from:
+  C:\PromiseOne\core
+- If not already there, the first command must be:
+  cd C:\PromiseOne\core
+
+---
+
+## 2. PowerShell Input Rules
+
+- Raw JSON or object literals are NEVER pasted directly into PowerShell
+- Structured content must use ONE of:
+  - Here-strings (@' '@) with Set-Content
+  - A dedicated .ps1 script file
+- If PowerShell errors with:
+  "'{' is not recognized as an internal or external command"
+  then the input format is invalid
+
+---
+
+## 3. Copy–Paste Safety
+
+- All instructions must be safe to paste as a single block
+- Line-by-line execution is NOT allowed unless explicitly stated
+- If a block must be split, that must be clearly labeled
+
+---
+
+## 4. Content Library Rules
+
+- All reusable content lives under:
+  content/library
+- One concept per JSON file
+- No hardcoded content inside templates
+- Templates reference content; content never references templates
+
+---
+
+## 5. File Creation Rules
+
+- Directories must be created before writing files
+- Use:
+  mkdir <path> -Force
+- Use:
+  Set-Content (not Out-File unless encoding matters)
+
+---
+
+## 6. Error Handling Protocol
+
+- Red text is informational, not emotional
+- First question is always:
+  “What did PowerShell interpret this input as?”
+- No guessing, no retrying blindly
+
+---
+
+## 7. Engine Design Philosophy
+
+- Deterministic > clever
+- Explicit > implicit
+- If behavior is unclear, it is considered a bug
+
+---
+
+## 8. Continuity Rule
+
+- Any helper must follow these rules exactly
+- If a suggestion violates a rule, it must be flagged before execution

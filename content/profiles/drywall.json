@@ -1,0 +1,103 @@
+{
+  "profile": "drywall",
+  "brand_name": "Sanchez Interior Finishing",
+  "phone": "(619) 555-0182",
+  "service_area_en": "Serving San Diego, Chula Vista & Surrounding Areas",
+  "service_area_es": "Sirviendo San Diego, Chula Vista y Áreas Cercanas",
+  "cta": "Request a Free Estimate",
+  "cta_en": "Request a Free Estimate",
+  "cta_es": "Pedir Estimación Gratis",
+  "pages": [
+    "Home",
+    "Services",
+    "Gallery",
+    "About",
+    "Contact"
+  ],
+  "hero_en": {
+    "title": "Drywall Finishing Done Right",
+    "subtitle": "Clean work. Smooth finish. Reliable service."
+  },
+  "hero_es": {
+    "title": "Acabado de Drywall Bien Hecho",
+    "subtitle": "Trabajo limpio. Acabado parejo. Servicio confiable."
+  },
+  "trust_points_en": [
+    "30+ years of hands-on trade experience",
+    "Clean lines, smooth finishes, consistent texture",
+    "Respect for your home: prep, protection, clean-up",
+    "Reliable scheduling and honest updates"
+  ],
+  "trust_points_es": [
+    "Más de 30 años de experiencia real",
+    "Acabados lisos y textura consistente",
+    "Respeto por su hogar: protección y limpieza",
+    "Horario confiable y comunicación honesta"
+  ],
+  "gallery_en": [
+    "Drywall finishing — smooth wall",
+    "Texture match — existing wall blend",
+    "Patch repair — clean seam",
+    "Corner finish — crisp edges",
+    "Ceiling repair — even surface",
+    "Room refresh — clean, ready to paint"
+  ],
+  "gallery_es": [
+    "Acabado liso",
+    "Igualación de textura",
+    "Parche limpio",
+    "Esquinas bien definidas",
+    "Reparación de techo",
+    "Cuarto listo para pintura"
+  ],
+  "contact_en": {
+    "intro": "Free Estimates — tell us what you need and we’ll respond with next steps.",
+    "message": "Use the form below to share your project details."
+  },
+  "contact_es": {
+    "intro": "Estimaciones Gratis — díganos qué necesita y le respondemos con los próximos pasos.",
+    "message": "Use el formulario para compartir los detalles de su proyecto."
+  },
+  "services": [
+    {
+      "title": "Drywall Installation",
+      "description": "New walls, replacements, additions, and interior builds—measured and installed clean."
+    },
+    {
+      "title": "Repairs & Patching",
+      "description": "From small holes to damaged sections—solid patching that blends in."
+    },
+    {
+      "title": "Finishing & Texture Matching",
+      "description": "Level coats, smooth finishes, orange peel, knockdown—matched to existing texture."
+    },
+    {
+      "title": "Interior Wall Restoration",
+      "description": "Fixing uneven surfaces, previous bad work, and wear—bringing walls back to clean."
+    }
+  ],
+  "services_es": [
+    {
+      "title": "Instalación de Drywall",
+      "description": "Paredes nuevas, reemplazos, adiciones y trabajos interiores—medido e instalado con cuidado."
+    },
+    {
+      "title": "Reparaciones y Parches",
+      "description": "Desde hoyos pequeños hasta secciones dañadas—parches firmes que se integran bien."
+    },
+    {
+      "title": "Acabado e Igualación de Textura",
+      "description": "Capas, acabados lisos, orange peel y knockdown—igualado a la textura existente."
+    },
+    {
+      "title": "Restauración de Paredes Interiores",
+      "description": "Arreglando superficies disparejas, trabajos previos y desgaste—dejando las paredes limpias."
+    }
+  ],
+  "modules": {
+    "contact-form": {
+      "provider": "formspree",
+      "endpoint": "https://formspree.io/f/mnjknklp"
+    }
+  }
+}

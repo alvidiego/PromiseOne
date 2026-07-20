@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "description": "PromiseOne pipeline",
+  "steps": [
+    { "name": "advisor", "script": "advisor.ps1", "enabled": true },
+    { "name": "plan",    "script": "plan.ps1",    "enabled": true },
+    { "name": "build",   "script": "build.ps1",   "enabled": true },
+    { "name": "deploy",  "script": "deploy.ps1",  "enabled": true }
+  ]
+}

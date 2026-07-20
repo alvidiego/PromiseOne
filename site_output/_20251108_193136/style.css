@@ -1,7 +1,0 @@
-:root{--bg:#0e0f13;--fg:#e6e7ea;--muted:#9aa0a6;--card:#151822;--brand:#6ea8fe}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui}
-.container{max-width:900px;margin:40px auto;padding:0 20px}
-.site-header,.site-footer{background:var(--card);padding:14px 20px;border-bottom:1px solid #222}
-.site-footer{border-top:1px solid #222;border-bottom:none;margin-top:40px}
-.brand{color:var(--brand);text-decoration:none;font-weight:600}
-h1{margin:16px 0 8px}p{color:var(--muted)}
