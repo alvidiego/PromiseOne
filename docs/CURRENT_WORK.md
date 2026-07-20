@@ -7,10 +7,10 @@ Permanent decisions belong in `docs/decisions`.
 
 ## Current Objective
 
-Preserve GXE as a strong, client-shareable advanced-theme V1 while stabilizing
-PromiseOne's repository, documentation, preview, deployment, and maintenance
-boundaries. Continue improving GXE through client feedback without generalizing
-the advanced-theme system prematurely.
+Preserve GXE as a strong, publicly deployed advanced-theme V1 while continuing
+client-led refinement and keeping PromiseOne's repository, preview, production,
+deployment, and maintenance boundaries explicit. Do not generalize the advanced
+theme system prematurely.
 
 ## Current GXE State
 
@@ -23,17 +23,24 @@ the advanced-theme system prematurely.
   settles naturally at the end of the selected segment without a final seek.
 - The first Main Menu landing shell is implemented. It keeps the product dominant,
   introduces the menu information during the film, and uses `Reserve Piece` as a
-  visible but intentionally unwired placeholder action.
+  visible but intentionally unwired placeholder action. That inactive action and
+  the visible `Product Name` placeholder are accepted limitations of the initial
+  production release.
 - GXE remains mobile-primary with functional mouse and Space/Enter hold support
   on desktop.
 - The current client-review build is `gxe_20260714_221516`.
 - The current shareable preview is recorded in
   `deployments/records/gxe/gxe-client-preview-20260714.json`.
+- The first production release serves that exact approved build from GitHub Pages
+  at `https://alvidiego.github.io/PromiseOne/`.
+- Production uses branch `gh-pages` at revision `c06a0aa`; its exact source and
+  validation results are recorded in
+  `deployments/records/gxe/gxe-production-20260720.json`.
 
 ## Active Direction
 
-- Treat the current GXE preview as a craftsmanship and client-feedback milestone,
-  not a reason to redesign the accepted interaction.
+- Treat the current GXE production release as a craftsmanship and client-feedback
+  milestone, not a reason to redesign the accepted interaction.
 - Keep the Main Menu as the future hub for the featured piece and one or two
   additional destinations.
 - Do not connect `Reserve Piece` to checkout until the client confirms the buying
@@ -81,7 +88,6 @@ the advanced-theme system prematurely.
 
 ## Next Step
 
-Finish the operational baseline, review it as a recoverable source milestone, and
-then use the current client-preview link to gather focused GXE feedback. The next
-GXE implementation should respond to client feedback or a confirmed product and
-purchasing asset rather than add speculative features.
+Gather focused feedback from the production URL and monitor the first public
+release. The next GXE implementation should respond to client feedback or a
+confirmed product and purchasing asset rather than add speculative features.

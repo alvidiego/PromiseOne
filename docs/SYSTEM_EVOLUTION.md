@@ -8,6 +8,26 @@ Add an entry only when a future contributor could misunderstand the working
 system without it. Group related changes and omit routine visual adjustments,
 copy edits, generated builds, and small local fixes.
 
+## 2026-07-20 - First Verified Production Deployment
+
+Area: Production deployment
+
+Improvement: The approved GXE build `gxe_20260714_221516` was published to a
+dedicated GitHub Pages production branch after its source baseline was merged into
+`main`. Publication used an explicit public-file allowlist and normal Git history
+without force-pushing.
+
+Impact: PromiseOne now has a verified path from committed source through exact
+client-approved artifact promotion to a public production URL while keeping
+client preview, production, generated metadata, and rollback references separate.
+
+Verified: The live page and all six public assets returned successfully and
+matched the approved artifact byte-for-byte. Build summaries and other local
+metadata were not published.
+
+Related: `docs/DEPLOYMENT_WORKFLOW.md`,
+`deployments/records/gxe/gxe-production-20260720.json`
+
 ## 2026-07-14 - First Shareable Advanced-Theme Client Preview
 
 Area: Themes and client preview

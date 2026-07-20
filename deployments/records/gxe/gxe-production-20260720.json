@@ -1,0 +1,58 @@
+{
+  "record_version": 1,
+  "client_id": "gxe",
+  "display_name": "GXE",
+  "project_name": "GXE",
+  "profile": "gxe",
+  "environment": "production",
+  "deployment_type": "production",
+  "source_branch": "main",
+  "source_revision": "50dca7956ccb97ad4d73fbdff73d6c3c9cca6b6c",
+  "source_build": "gxe_20260714_221516",
+  "source_build_created": "2026-07-14T22:15:16-07:00",
+  "build_command": ".\\src\\core\\engine.ps1 -UserInput \"GXE natural video stop\" -Client \"GXE\" -Profile \"gxe\" -Provider Folder -Verbose",
+  "build_output_path": "site_output/gxe_20260714_221516",
+  "provider": "github-pages-branch",
+  "repository": "alvidiego/PromiseOne",
+  "deployment_branch": "gh-pages",
+  "deployment_revision": "c06a0aa50ae6a744ccf516e3f41273264451a0f4",
+  "url": "https://alvidiego.github.io/PromiseOne/",
+  "custom_domain": null,
+  "published": "2026-07-20",
+  "deployment_timestamp": "2026-07-20T16:05:39.0340463-07:00",
+  "current_live_version": "c06a0aa50ae6a744ccf516e3f41273264451a0f4",
+  "previous_live_revision": null,
+  "status": "live-verified",
+  "production": true,
+  "published_files": [
+    "index.html",
+    "assets/",
+    ".nojekyll"
+  ],
+  "excluded_metadata": [
+    "build_summary.json",
+    "pages.json",
+    "home.en.html"
+  ],
+  "validation_results": {
+    "merged_source_build": "passed",
+    "approved_public_file_hashes": "exact match",
+    "production_http": "passed",
+    "production_asset_hashes": "exact match",
+    "missing_assets": 0,
+    "localhost_or_filesystem_references": 0,
+    "public_build_metadata": "excluded",
+    "interaction": "Exact client-tested files published; automated production browser control was unavailable"
+  },
+  "accepted_limitations": [
+    "The visible product name remains the intentional Product Name placeholder.",
+    "Reserve Piece remains intentionally inactive until the client confirms a purchasing path."
+  ],
+  "rollback_reference": {
+    "type": "first-production",
+    "approved_build": "gxe_20260714_221516",
+    "deployment_revision": "c06a0aa50ae6a744ccf516e3f41273264451a0f4",
+    "client_preview_revision": "3011580",
+    "procedure": "Disable GitHub Pages or republish this recorded deployment revision; no previous production version exists."
+  }
+}
