@@ -4,62 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | GXE</title>
+<link rel="icon" href="assets/gxe-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/style.css" />
     
 </head>
 <body>
     <main>
-        <section class="gxe-experience" data-stage="arrival" aria-label="GXE featured piece experience">
-    <section class="gxe-scene gxe-arrival-scene" aria-label="GXE arrival">
-    <div class="gxe-emblem" role="img" aria-label="GXE chrome emblem">
-        <span class="gxe-word">
-            <img class="gxe-reference gxe-reference-chrome" src="assets/gxe-reference.jpg" alt="" />
-            <img class="gxe-reference gxe-reference-full" src="assets/gxe-reference.jpg" alt="" />
-        </span>
-        <span class="gxe-stones" aria-hidden="true">
-            <span class="gxe-stone gxe-stone-01"></span>
-            <span class="gxe-stone gxe-stone-02"></span>
-            <span class="gxe-stone gxe-stone-03"></span>
-            <span class="gxe-stone gxe-stone-04"></span>
-            <span class="gxe-stone gxe-stone-05"></span>
-            <span class="gxe-stone gxe-stone-06"></span>
-            <span class="gxe-stone gxe-stone-07"></span>
-            <span class="gxe-stone gxe-stone-08"></span>
-            <span class="gxe-stone gxe-stone-09"></span>
-            <span class="gxe-stone gxe-stone-10"></span>
-            <span class="gxe-stone gxe-stone-11"></span>
-            <span class="gxe-stone gxe-stone-12"></span>
-        </span>
-    </div>
+        <section class="gxe-experience" data-stage="arrival" data-intro-delay="1000" aria-label="GXE featured piece experience">
+    <h1 class="gxe-visually-hidden">GXE independent streetwear first drop</h1>
 
-    <button class="gxe-hold" type="button" aria-label="Press and hold to reveal GXE">
-        <span class="gxe-hold-instruction">Press and hold</span>
-    </button>
+    <section class="gxe-scene gxe-arrival-scene" aria-label="GXE automatic arrival">
+        <div class="gxe-emblem" role="img" aria-label="GXE chrome emblem">
+            <span class="gxe-word">
+                <img class="gxe-reference gxe-reference-chrome" src="assets/gxe-reference.jpg" alt="" />
+                <img class="gxe-reference gxe-reference-full" src="assets/gxe-reference.jpg" alt="" />
+            </span>
+            <span class="gxe-stones" aria-hidden="true">
+                <span class="gxe-stone gxe-stone-01"></span>
+                <span class="gxe-stone gxe-stone-02"></span>
+                <span class="gxe-stone gxe-stone-03"></span>
+                <span class="gxe-stone gxe-stone-04"></span>
+                <span class="gxe-stone gxe-stone-05"></span>
+                <span class="gxe-stone gxe-stone-06"></span>
+                <span class="gxe-stone gxe-stone-07"></span>
+                <span class="gxe-stone gxe-stone-08"></span>
+                <span class="gxe-stone gxe-stone-09"></span>
+                <span class="gxe-stone gxe-stone-10"></span>
+                <span class="gxe-stone gxe-stone-11"></span>
+                <span class="gxe-stone gxe-stone-12"></span>
+            </span>
+        </div>
+
     </section>
 
     <div class="gxe-bloom" aria-hidden="true"></div>
 
     <section class="gxe-scene gxe-product-scene" aria-label="Featured product reveal" aria-hidden="true">
-    <article class="piece-stage" aria-label="Product Name">
-        <div class="piece-light" aria-hidden="true"></div>
-        <div class="piece-media" data-product-media data-video-start="8.6" data-video-duration="6">
+        <nav class="gxe-hub-nav" aria-label="Explore GXE">
+            <span class="gxe-hub-mark" aria-hidden="true">GXE</span>
+            <div class="gxe-hub-links">
+                <button type="button" data-gxe-panel="piece">Piece</button>
+                <button type="button" data-gxe-panel="story">Story</button>
+                <button type="button" data-gxe-panel="support">Delivery</button>
+            </div>
+            <button class="gxe-replay" type="button" data-gxe-replay>Replay</button>
+        </nav>
+
+        <article class="piece-stage" aria-label="Godfather No. 01 Tee">
+            <div class="piece-light" aria-hidden="true"></div>
+        <div class="piece-media" data-product-media data-video-start="8.6" data-video-duration="6" data-video-final-frame="0">
             <div class="piece-video-frame">
-                <div class="piece-media-fallback" role="img" aria-label="Product Name"></div>
+                <div class="piece-media-fallback" role="img" aria-label="Godfather No. 01 Tee"></div>
                 <video class="piece-video" muted playsinline preload="auto" aria-hidden="true">
                     <source src="assets/gxe-product.mp4" type="video/mp4" />
                 </video>
+                <div class="piece-video-cover" aria-hidden="true"></div>
             </div>
         </div>
-    </article>
-    <nav class="gxe-main-menu" aria-label="GXE main menu">
-        <div class="gxe-menu-brand" aria-label="GXE">GXE</div>
-        <div class="gxe-menu-current">
-            <span class="gxe-menu-product">Product Name</span>
-            <span class="gxe-menu-line">The center of the GXE world.</span>
-        </div>
-        <button class="gxe-menu-action" type="button">Reserve Piece</button>
-    </nav>
+            <div class="piece-copy">
+                <p class="piece-kicker">Drop 001 / Limited reservation</p>
+                <h2><button type="button" data-gxe-panel="piece" aria-label="View Godfather No. 01 Tee details">Godfather No. 01 Tee</button></h2>
+                <p class="piece-summary"><strong>$68</strong><span>Heavyweight first-drop uniform.</span></p>
+            </div>
+        </article>
+
+        <nav class="gxe-main-menu" aria-label="GXE main menu">
+            <div class="gxe-menu-brand" aria-label="GXE">GXE</div>
+            <button class="gxe-menu-current" type="button" data-gxe-panel="piece" aria-label="View Godfather No. 01 Tee details">
+                <span class="gxe-menu-product">Drop 001</span>
+                <span class="gxe-menu-line">$68 / View details</span>
+            </button>
+            <button class="gxe-menu-action" type="button" data-gxe-panel="reserve">Reserve size</button>
+        </nav>
     </section>
+
+    <dialog class="gxe-detail-dialog" data-gxe-dialog aria-labelledby="gxe-dialog-title">
+        <div class="gxe-dialog-shell">
+            <header class="gxe-dialog-header">
+                <div>
+                    <p class="gxe-dialog-kicker">First-drop preview</p>
+                    <h2 id="gxe-dialog-title" tabindex="-1">GXE / Drop 001</h2>
+                </div>
+                <button class="gxe-dialog-close" type="button" data-gxe-close aria-label="Close details">Close</button>
+            </header>
+
+            <nav class="gxe-dialog-tabs" aria-label="First drop details">
+                <button type="button" data-gxe-panel="piece">The piece</button>
+                <button type="button" data-gxe-panel="story">Our story</button>
+                <button type="button" data-gxe-panel="support">Delivery</button>
+            </nav>
+
+            <section class="gxe-dialog-view" data-gxe-view="piece">
+                <div class="gxe-product-heading">
+                    <div>
+                        <p class="gxe-eyebrow">Drop 001 / Limited reservation</p>
+                        <h3>Godfather No. 01 Tee</h3>
+                    </div>
+                    <strong>$68</strong>
+                </div>
+                <p class="gxe-dialog-lede">Heavyweight first-drop uniform. A first statement piece designed to introduce GXE before the world expands.</p>
+                <dl class="gxe-product-facts">
+                    <div><dt>Material</dt><dd>240 GSM heavyweight cotton</dd></div>
+                    <div><dt>Fit</dt><dd>Relaxed unisex fit</dd></div>
+                    <div><dt>Color</dt><dd>Midnight black / chrome</dd></div>
+                    <div><dt>Artwork</dt><dd>Front-and-back statement artwork</dd></div>
+                </dl>
+                <div class="gxe-fit-note">
+                    <h4>Fit guidance</h4>
+                    <p>Choose your usual size for the intended relaxed silhouette. Size down for a closer fit. Final measurements should be confirmed before payment opens.</p>
+                </div>
+                <button class="gxe-primary-button" type="button" data-gxe-panel="reserve">Reserve your size</button>
+            </section>
+
+            <section class="gxe-dialog-view" data-gxe-view="story" hidden>
+                <p class="gxe-eyebrow">Built from the first piece out</p>
+                <h3>Make every release feel like an arrival, not another listing.</h3>
+                <p class="gxe-dialog-lede">GXE begins with one emblem, one piece, and a first drop built to introduce the world before expanding it. Jewelry light, dark space, and statement graphics turn the reveal into part of the garment&#39;s identity.</p>
+                <div class="gxe-story-principles">
+                    <article><span>01</span><h4>One drop at a time</h4><p>Start focused, learn from the people who wear it, and expand with intention.</p></article>
+                    <article><span>02</span><h4>World before catalog</h4><p>Every release carries an atmosphere, not just a product image and price.</p></article>
+                    <article><span>03</span><h4>Statement over noise</h4><p>Fewer pieces, clearer identity, and details that reward a closer look.</p></article>
+                </div>
+            </section>
+
+            <section class="gxe-dialog-view" data-gxe-view="support" hidden>
+                <p class="gxe-eyebrow">Know before you reserve</p>
+                <h3>First-drop service</h3>
+                <div class="gxe-policy-grid">
+                    <article><h4>Dispatch</h4><p>First-drop reservations are expected to dispatch 3-4 weeks after the reservation window closes. Final timing is confirmed before payment.</p></article>
+                    <article><h4>Returns and fit</h4><p>Unworn pieces may be returned or exchanged within 14 days of delivery. Final fulfillment terms are confirmed before payment.</p></article>
+                    <article><h4>Client services</h4><p>Launch questions are handled through the reservation request. GXE should connect a monitored client-services inbox before public orders open.</p></article>
+                    <article><h4>Payment</h4><p>No payment is taken during this concept reservation. Price, timing, and final terms are shown again before any order is placed.</p></article>
+                </div>
+                <button class="gxe-secondary-button" type="button" data-gxe-panel="reserve">Start a first-drop request</button>
+            </section>
+
+            <section class="gxe-dialog-view" data-gxe-view="reserve" hidden>
+                <p class="gxe-eyebrow">First-drop access</p>
+                <h3>Reserve Godfather No. 01</h3>
+                <p class="gxe-dialog-lede">Choose a size and request first-drop access. No payment is collected in this preview.</p>
+                <form class="gxe-reservation-form" data-gxe-reservation-form>
+                    <div class="gxe-field-grid">
+                        <label>Full name<input name="name" autocomplete="name" required /></label>
+                        <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+                        <label>Preferred size<select name="size" required><option value="">Choose size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                            </select></label>
+                        <label>Fit preference<select name="fit" required><option value="">Choose fit</option><option value="relaxed">Relaxed / true to size</option><option value="closer">Closer / size down</option></select></label>
+                    </div>
+                    <label>Question or note<textarea name="note" rows="3" placeholder="Sizing, timing, or first-drop question"></textarea></label>
+                    <label class="gxe-consent"><input name="updates" type="checkbox" required /> <span>I want first-drop availability and final order details.</span></label>
+                    <button class="gxe-primary-button" type="submit">Save preview request</button>
+                    <p class="gxe-form-note">Preview requests stay on this device until GXE connects a delivery service.</p>
+                </form>
+                <div class="gxe-reservation-success" data-gxe-reservation-success hidden tabindex="-1" aria-live="polite">
+                    <p class="gxe-eyebrow">Preview request saved</p>
+                    <h3 data-gxe-reservation-reference>GXE preview reference</h3>
+                    <p>Your size and contact details were saved in this browser only. No payment was taken and no message was sent.</p>
+                    <div class="gxe-success-actions">
+                        <button class="gxe-secondary-button" type="button" data-gxe-reservation-reset>Change details</button>
+                        <button class="gxe-primary-button" type="button" data-gxe-close>Return to GXE</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </dialog>
 </section>
     </main>
     <script src="assets/experience.js"></script>

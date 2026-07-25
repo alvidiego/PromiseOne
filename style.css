@@ -295,7 +295,7 @@ a {
     text-transform: uppercase;
 }
 
-.piece-copy h1 {
+.piece-copy h2 {
     margin: 7px 0 6px;
     font-size: clamp(1.6rem, 8vw, 2.75rem);
     line-height: .95;
@@ -327,7 +327,7 @@ a {
     transition: none;
 }
 
-/* ADR 0009: press-and-hold ice-out arrival */
+/* GXE automatic ice-out arrival */
 .gxe-experience {
     background: #000;
 }
@@ -384,66 +384,6 @@ a {
     opacity: 0;
 }
 
-.gxe-hold {
-    position: absolute;
-    inset: 0;
-    z-index: 7;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding: 0;
-    background: transparent;
-    color: var(--chrome);
-    cursor: pointer;
-    touch-action: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.gxe-hold-instruction {
-    position: absolute;
-    left: 50%;
-    bottom: calc(clamp(48px, 12vh, 92px) + env(safe-area-inset-bottom));
-    min-width: 132px;
-    padding: 12px 10px 16px;
-    color: rgba(243,246,255,.78);
-    font-size: .78rem;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    transform: translateX(-50%);
-    transition: opacity 180ms ease;
-}
-
-.gxe-hold-instruction::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 4px;
-    width: 44px;
-    height: 1px;
-    opacity: .72;
-    background: rgba(243,246,255,.48);
-    transform: translateX(-50%) scaleX(.72);
-    transform-origin: center;
-    transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.gxe-hold:focus-visible {
-    outline: none;
-}
-
-.gxe-hold:focus-visible .gxe-hold-instruction {
-    outline: 1px solid rgba(255,255,255,.7);
-    outline-offset: 7px;
-}
-
-.gxe-hold:disabled {
-    pointer-events: none;
-}
 
 .gxe-stones {
     position: absolute;
@@ -509,14 +449,6 @@ a {
 .gxe-stone-11 { --stone-x: 80.4%; --stone-y: 49.3%; --stone-delay: 1640ms; --stone-size: clamp(3px, .9vw, 5px); --stone-ray: 185%; --stone-ray-opacity: .54; --stone-peak: 1.34; --stone-rest-opacity: .38; --stone-turn: 52deg; }
 .gxe-stone-12 { --stone-x: 85.7%; --stone-y: 51.2%; --stone-delay: 1680ms; --stone-size: clamp(4px, 1.2vw, 7px); --stone-ray: 250%; --stone-ray-opacity: .72; --stone-peak: 1.48; --stone-rest-opacity: .52; --stone-turn: 43deg; }
 
-.gxe-experience[data-engaged="true"] .gxe-hold-instruction {
-    opacity: 0;
-}
-
-.gxe-experience[data-engaged="true"] .gxe-hold-instruction::after {
-    opacity: 0;
-    transform: translateX(-50%) scaleX(.3);
-}
 
 .gxe-experience[data-engaged="true"] .gxe-emblem {
     transform: translate3d(-50%, -50%, 0) scale(1.045);
@@ -787,6 +719,16 @@ a {
     box-shadow: inset 0 0 34px rgba(0,0,0,.22);
 }
 
+.piece-video-cover {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: #000;
+    opacity: 1;
+    transition: opacity 220ms ease;
+}
+
 .piece-media-fallback,
 .piece-video {
     position: absolute;
@@ -814,6 +756,16 @@ a {
     opacity: 1;
 }
 
+.piece-media[data-playing="true"] .piece-video-cover,
+.piece-media[data-final-frame="true"] .piece-video-cover,
+.piece-media[data-failed="true"] .piece-video-cover {
+    opacity: 0;
+}
+
+.piece-media[data-transitioning="true"] .piece-video-cover {
+    opacity: 1;
+}
+
 .piece-media[data-failed="true"] .piece-video {
     display: none;
 }
@@ -830,7 +782,7 @@ a {
         transform 760ms cubic-bezier(.18,.78,.2,1) 120ms;
 }
 
-.gxe-product-scene .piece-copy h1 {
+.gxe-product-scene .piece-copy h2 {
     margin: 0 0 9px;
     font-size: clamp(1.5rem, 7vw, 2.35rem);
     line-height: 1;
@@ -838,12 +790,48 @@ a {
     text-shadow: 0 7px 24px rgba(0,0,0,.72);
 }
 
-.gxe-product-scene .piece-copy > p:last-child {
+.gxe-product-scene .piece-copy h2 button {
+    appearance: none;
+    padding: 0;
+    color: inherit;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.gxe-product-scene .piece-copy h2 button:hover,
+.gxe-product-scene .piece-copy h2 button:focus-visible {
+    color: #d9baff;
+}
+
+.gxe-product-scene .piece-copy h2 button:focus-visible {
+    outline: 2px solid rgba(206,156,255,.94);
+    outline-offset: 4px;
+}
+
+.gxe-product-scene .piece-summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 9px;
     max-width: 30rem;
     margin-inline: auto;
     color: rgba(207,214,231,.7);
     font-size: .84rem;
     line-height: 1.45;
+}
+
+.gxe-product-scene .piece-summary strong {
+    color: rgba(250,251,255,.96);
+    font-size: .9rem;
+}
+
+.gxe-product-scene .piece-summary span::before {
+    content: "/";
+    margin-right: 9px;
+    color: rgba(196,145,255,.7);
 }
 
 .gxe-experience[data-stage="product"] .gxe-product-scene::before {
@@ -1015,7 +1003,7 @@ a {
 }
 
 .gxe-product-scene .piece-media {
-    width: min(75vw, 318px);
+    width: min(64vw, 286px);
     transform: translate3d(0, -3.4vh, 0) scale(.985);
 }
 
@@ -1258,5 +1246,518 @@ a {
         transition-duration: 1ms !important;
         transition-delay: 0ms !important;
         scroll-behavior: auto !important;
+    }
+}
+/* GXE Drop 001 customer-confidence layer */
+.gxe-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+.gxe-menu-current:focus-visible,
+.gxe-hub-nav button:focus-visible,
+.gxe-dialog-tabs button:focus-visible,
+.gxe-dialog-close:focus-visible,
+.gxe-primary-button:focus-visible,
+.gxe-secondary-button:focus-visible,
+.gxe-reservation-form input:focus-visible,
+.gxe-reservation-form select:focus-visible,
+.gxe-reservation-form textarea:focus-visible {
+    outline: 2px solid rgba(206,156,255,.94);
+    outline-offset: 3px;
+}
+.gxe-hub-nav {
+    position: absolute;
+    top: max(10px, env(safe-area-inset-top));
+    left: clamp(12px, 3vw, 32px);
+    right: clamp(12px, 3vw, 32px);
+    z-index: 7;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 5px 6px 5px 14px;
+    border: 1px solid rgba(247,249,255,.08);
+    border-top-color: rgba(247,249,255,.14);
+    background: linear-gradient(180deg, rgba(15,15,23,.72), rgba(3,3,7,.52));
+    box-shadow: 0 12px 34px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.035);
+    backdrop-filter: blur(18px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 520ms ease 180ms, transform 620ms cubic-bezier(.18,.78,.2,1) 180ms;
+}
+
+.gxe-product-scene[data-product-complete="true"] .gxe-hub-nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.gxe-hub-mark {
+    color: rgba(248,250,255,.92);
+    font-family: "Arial Black", Impact, Arial, Helvetica, sans-serif;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.gxe-hub-links {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.gxe-hub-nav button,
+.gxe-dialog-tabs button,
+.gxe-dialog-close {
+    min-height: 34px;
+    color: rgba(222,227,241,.68);
+    border: 0;
+    background: transparent;
+    font-size: .64rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gxe-hub-nav button {
+    padding: 0 11px;
+}
+
+.gxe-hub-nav button:hover,
+.gxe-hub-nav button:focus-visible,
+.gxe-hub-nav button[aria-current="page"],
+.gxe-dialog-tabs button:hover,
+.gxe-dialog-tabs button:focus-visible,
+.gxe-dialog-tabs button[aria-current="page"] {
+    color: #fff;
+}
+
+.gxe-replay {
+    border: 1px solid rgba(255,255,255,.09) !important;
+}
+
+.gxe-menu-current {
+    appearance: none;
+    width: 100%;
+    color: inherit;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+.gxe-menu-current:hover .gxe-menu-product,
+.gxe-menu-current:focus-visible .gxe-menu-product {
+    color: #d9baff;
+}
+
+.gxe-detail-dialog {
+    width: min(760px, calc(100vw - 28px));
+    max-width: 760px;
+    max-height: min(86dvh, 820px);
+    padding: 0;
+    color: #f5f7ff;
+    border: 1px solid rgba(244,247,255,.15);
+    border-top-color: rgba(255,255,255,.27);
+    background: transparent;
+    box-shadow: 0 34px 110px rgba(0,0,0,.78), 0 0 80px rgba(111,29,218,.13);
+    overflow: hidden;
+}
+
+.gxe-detail-dialog::backdrop {
+    background: rgba(0,0,4,.84);
+    backdrop-filter: blur(12px);
+}
+
+.gxe-dialog-shell {
+    max-height: min(86dvh, 820px);
+    padding: clamp(20px, 4vw, 42px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    background:
+        radial-gradient(circle at 82% 0%, rgba(132,35,255,.17), transparent 34%),
+        radial-gradient(circle at 4% 100%, rgba(85,108,190,.1), transparent 36%),
+        linear-gradient(145deg, rgba(18,18,28,.99), rgba(4,4,9,.995) 68%);
+}
+
+.gxe-dialog-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.gxe-dialog-kicker,
+.gxe-eyebrow {
+    margin: 0 0 8px;
+    color: rgba(203,157,255,.88);
+    font-size: .64rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.gxe-dialog-header h2,
+.gxe-dialog-view h3,
+.gxe-dialog-view h4,
+.gxe-dialog-view p,
+.gxe-dialog-view dl {
+    margin-top: 0;
+}
+
+.gxe-dialog-header h2 {
+    margin-bottom: 0;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    letter-spacing: -.025em;
+}
+
+.gxe-dialog-close {
+    flex: 0 0 auto;
+    min-width: 54px;
+    padding: 0 8px;
+    border: 1px solid rgba(255,255,255,.11);
+}
+
+.gxe-dialog-tabs {
+    display: flex;
+    gap: 4px;
+    margin: 18px 0 28px;
+    padding: 4px;
+    border: 1px solid rgba(255,255,255,.07);
+    background: rgba(0,0,0,.22);
+}
+
+.gxe-dialog-tabs button {
+    flex: 1 1 0;
+    min-height: 40px;
+}
+
+.gxe-dialog-tabs button[aria-current="page"] {
+    background: rgba(143,43,255,.18);
+    box-shadow: inset 0 0 0 1px rgba(184,116,255,.16);
+}
+
+.gxe-detail-dialog [hidden] {
+    display: none !important;
+}
+
+.gxe-product-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 18px;
+}
+
+.gxe-product-heading h3,
+.gxe-dialog-view > h3 {
+    max-width: 620px;
+    margin-bottom: 0;
+    font-size: clamp(1.7rem, 6vw, 3.35rem);
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+
+.gxe-product-heading strong {
+    color: #fff;
+    font-size: clamp(1.2rem, 3vw, 1.75rem);
+}
+
+.gxe-dialog-lede {
+    max-width: 620px;
+    margin-bottom: 28px;
+    color: rgba(224,228,241,.72);
+    font-size: clamp(.95rem, 2vw, 1.08rem);
+    line-height: 1.65;
+}
+
+.gxe-product-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,.08);
+}
+
+.gxe-product-facts div,
+.gxe-policy-grid article,
+.gxe-story-principles article,
+.gxe-fit-note {
+    padding: 18px;
+    background: rgba(8,8,14,.92);
+}
+
+.gxe-product-facts dt,
+.gxe-story-principles span {
+    margin-bottom: 8px;
+    color: rgba(196,145,255,.78);
+    font-size: .62rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.gxe-product-facts dd {
+    margin: 0;
+    color: rgba(247,248,255,.9);
+    font-size: .88rem;
+    line-height: 1.45;
+}
+
+.gxe-fit-note {
+    margin-bottom: 22px;
+    border-left: 2px solid rgba(145,53,255,.68);
+}
+
+.gxe-fit-note h4,
+.gxe-policy-grid h4,
+.gxe-story-principles h4 {
+    margin-bottom: 7px;
+    font-size: .9rem;
+}
+
+.gxe-fit-note p,
+.gxe-policy-grid p,
+.gxe-story-principles p,
+.gxe-reservation-success p {
+    margin-bottom: 0;
+    color: rgba(218,223,238,.66);
+    font-size: .84rem;
+    line-height: 1.58;
+}
+
+.gxe-story-principles,
+.gxe-policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 28px;
+    background: rgba(255,255,255,.08);
+}
+
+.gxe-policy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 24px;
+}
+
+.gxe-primary-button,
+.gxe-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gxe-primary-button {
+    color: #fff;
+    border: 1px solid rgba(222,187,255,.22);
+    background: linear-gradient(180deg, #a933ff, #6713ce);
+    box-shadow: 0 14px 34px rgba(74,8,145,.38), inset 0 1px 0 rgba(255,255,255,.22);
+}
+
+.gxe-secondary-button {
+    color: rgba(245,247,255,.9);
+    border: 1px solid rgba(255,255,255,.13);
+    background: rgba(255,255,255,.045);
+}
+
+.gxe-primary-button:hover,
+.gxe-primary-button:focus-visible,
+.gxe-secondary-button:hover,
+.gxe-secondary-button:focus-visible {
+    filter: brightness(1.1);
+}
+
+.gxe-field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.gxe-reservation-form label {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: rgba(231,234,245,.72);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.gxe-reservation-form input,
+.gxe-reservation-form select,
+.gxe-reservation-form textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 13px;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 0;
+    background: rgba(0,0,0,.3);
+    font: 500 .9rem/1.4 Arial, Helvetica, sans-serif;
+    text-transform: none;
+}
+
+.gxe-reservation-form textarea {
+    min-height: 96px;
+    resize: vertical;
+}
+
+.gxe-consent {
+    grid-template-columns: auto 1fr !important;
+    align-items: start;
+    max-width: 540px;
+    line-height: 1.45;
+    text-transform: none !important;
+}
+
+.gxe-consent input {
+    width: 18px;
+    min-height: 18px;
+    margin: 1px 0 0;
+    accent-color: #9d35ff;
+}
+
+.gxe-form-note {
+    margin: 12px 0 0;
+    color: rgba(215,220,236,.5);
+    font-size: .72rem;
+    line-height: 1.5;
+}
+
+.gxe-reservation-success {
+    padding: clamp(24px, 5vw, 44px);
+    border: 1px solid rgba(182,112,255,.2);
+    background: radial-gradient(circle at 50% 0%, rgba(139,42,255,.17), transparent 48%), rgba(0,0,0,.22);
+    text-align: center;
+}
+
+.gxe-reservation-success h3 {
+    margin-bottom: 12px;
+    font-size: clamp(1.45rem, 5vw, 2.3rem);
+}
+
+.gxe-success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+@media (min-width: 900px) {
+    .gxe-hub-nav {
+        left: 50%;
+        right: auto;
+        width: min(760px, calc(100vw - 64px));
+        transform: translate3d(-50%, -10px, 0);
+    }
+
+    .gxe-product-scene[data-product-complete="true"] .gxe-hub-nav {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@media (max-width: 699px) {
+
+    .gxe-hub-nav {
+        left: 8px;
+        right: 8px;
+        gap: 4px;
+        padding-left: 9px;
+    }
+
+    .gxe-hub-mark {
+        display: none;
+    }
+
+    .gxe-hub-nav {
+        grid-template-columns: 1fr auto;
+    }
+
+    .gxe-hub-links {
+        justify-content: flex-start;
+    }
+
+    .gxe-hub-nav button {
+        min-height: 38px;
+        padding-inline: 8px;
+        font-size: .58rem;
+    }
+
+    .gxe-dialog-shell {
+        padding: 20px 16px calc(22px + env(safe-area-inset-bottom));
+    }
+
+    .gxe-dialog-header {
+        gap: 12px;
+    }
+
+    .gxe-dialog-tabs {
+        margin: 14px 0 24px;
+    }
+
+    .gxe-dialog-tabs button {
+        padding-inline: 5px;
+        font-size: .57rem;
+    }
+
+    .gxe-product-heading {
+        align-items: flex-start;
+    }
+
+    .gxe-product-heading h3,
+    .gxe-dialog-view > h3 {
+        font-size: clamp(1.65rem, 9vw, 2.55rem);
+    }
+
+    .gxe-product-facts,
+    .gxe-policy-grid,
+    .gxe-story-principles,
+    .gxe-field-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gxe-product-facts div,
+    .gxe-policy-grid article,
+    .gxe-story-principles article,
+    .gxe-fit-note {
+        padding: 15px;
+    }
+
+    .gxe-primary-button,
+    .gxe-secondary-button {
+        width: 100%;
+    }
+
+    .gxe-success-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .gxe-hub-nav button {
+        padding-inline: 6px;
+        font-size: .54rem;
     }
 }
