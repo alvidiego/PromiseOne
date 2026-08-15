@@ -1,0 +1,30 @@
+[
+  {
+    "page": "Home",
+    "file": "home.en.html"
+  },
+  {
+    "page": "Programs",
+    "file": "programs.en.html"
+  },
+  {
+    "page": "Workshops & Events",
+    "file": "workshops_events.en.html"
+  },
+  {
+    "page": "Resources",
+    "file": "resources.en.html"
+  },
+  {
+    "page": "Our Team",
+    "file": "our_team.en.html"
+  },
+  {
+    "page": "Get Involved",
+    "file": "get_involved.en.html"
+  },
+  {
+    "page": "Contact & Visit",
+    "file": "contact_visit.en.html"
+  }
+]

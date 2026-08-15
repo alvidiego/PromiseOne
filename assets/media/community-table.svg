@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Community learning table illustration</title>
+  <desc id="description">An editorial illustration of books, paper, pencils, and six chairs arranged around a shared table.</desc>
+  <rect width="1200" height="800" fill="#F2E9D8"/>
+  <circle cx="174" cy="142" r="92" fill="#D66B4D" opacity="0.86"/>
+  <circle cx="1016" cy="650" r="116" fill="#A8B5A1" opacity="0.68"/>
+  <path d="M80 688C238 562 350 606 468 516C611 408 689 480 814 378C926 286 1054 326 1160 250V800H80Z" fill="#E2D5BD"/>
+  <rect x="294" y="222" width="612" height="356" rx="36" fill="#FFFDF8" stroke="#243A34" stroke-width="12"/>
+  <g fill="#243A34">
+    <rect x="356" y="160" width="122" height="74" rx="24"/>
+    <rect x="539" y="136" width="122" height="86" rx="24"/>
+    <rect x="722" y="160" width="122" height="74" rx="24"/>
+    <rect x="356" y="566" width="122" height="74" rx="24"/>
+    <rect x="539" y="578" width="122" height="86" rx="24"/>
+    <rect x="722" y="566" width="122" height="74" rx="24"/>
+  </g>
+  <g stroke="#243A34" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M386 300h190v126H386z" fill="#F4BE63"/>
+    <path d="M576 300h34c44 0 80 36 80 80v46H576z" fill="#FFF7E7"/>
+    <path d="M480 300v126" fill="none"/>
+    <path d="M724 300h106v164H724z" fill="#A8B5A1"/>
+    <path d="M747 335h60M747 370h60M747 405h42" fill="none"/>
+    <path d="M400 500l130-34 16 60-130 34z" fill="#D66B4D"/>
+    <path d="M626 498l154-58" fill="none"/>
+    <path d="M646 532l154-58" fill="none"/>
+  </g>
+  <g fill="#243A34">
+    <circle cx="232" cy="310" r="18"/>
+    <circle cx="963" cy="238" r="14"/>
+    <circle cx="995" cy="286" r="9"/>
+    <circle cx="213" cy="358" r="9"/>
+  </g>
+</svg>
