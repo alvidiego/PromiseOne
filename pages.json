@@ -1,0 +1,18 @@
+[
+  {
+    "page": "Home",
+    "file": "home.en.html"
+  },
+  {
+    "page": "The Piece",
+    "file": "the_piece.en.html"
+  },
+  {
+    "page": "Exposure",
+    "file": "exposure.en.html"
+  },
+  {
+    "page": "Contact",
+    "file": "contact.en.html"
+  }
+]
